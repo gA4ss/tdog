@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<tdog>
+  <custom_loader>
+  <loader_offset size="4">$LOADER_OFFSET</loader_offset>
+  <orig_entry size="4">$ORIG_ENTRY</orig_entry>
+  <xct_offset size="4">$XCT_OFFSET</xct_offset>
+  <elfheader>$ELF_EHDR_OFFSET</elfheader>
+  <phdrheader>$ELF_PHDR_OFFSET</phdrheader>
+  <encrypt_string>$ENCRYPT_INSIDE_DATA_NAME</encrypt_string>
+  <strtab_offset>$STRTAB_OFFSET</strtab_offset>
+  <symtab_offset>$SYMTAB_OFFSET</symtab_offset>
+  <symnum>$SYMNUM</symnum>
+  <encrypt_string_key>$ENCRYPT_INSIDE_DATA_NAME_KEY</encrypt_string_key>
+  <rel_elfheader>$REL_CLEAN_ELF_EHDR</rel_elfheader>
+  <rel_loader>$REL_ENCRYPT_LOADER</rel_loader>
+  <elfheader_buf size="40">$ELF_EHDR</elfheader_buf>
+  <phdr_buf size="200">$ELF_PHDR</phdr_buf>
+  <old_targetsz>$TARGET_OLD_SIZE</old_targetsz>
+  <new_targetsz>$TARGET_NEW_SIZE</new_targetsz>
+  <old_target>$TARGET_OLD_OFFSET</old_target>
+  <new_target>$TARGET_NEW_OFFSET</new_target>
+  <target_key>$TARGET_KEY</target_key>
+  </custom_loader>
+
+  <dis>
+	<tdog_loader_offset size="4">$LOADER_OFFSET</tdog_loader_offset>
+	<tdog_orig_entry size="4">$ORIG_ENTRY</tdog_orig_entry>
+  </dis>
+</tdog>

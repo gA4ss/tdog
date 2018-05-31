@@ -1,0 +1,1 @@
+/home/devilogic/sdk/android-ndk-r8e/toolchains/arm-linux-androideabi-4.4.3/prebuilt/linux-x86_64/bin/arm-linux-androideabi-objdump -D ./world.so

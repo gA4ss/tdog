@@ -1,0 +1,5 @@
+-----------------------------------------------------±¾µØedog ¼Ó¿Ç 
+
+protect/ddog/tool/tdog.out -P -E 12AZFUYUY --select-cipher-type=stream --keep-code-local -l1./ldog_arm.so -lx./ldog_conf.xml -lc./ldog_cipher.so --backup ./libedog.so
+
+protect/ddog/tool/tdog.out --set-arch=x86 -P -E 12AZFUYUY --select-cipher-type=stream --keep-code-local -l1protect/ddog/tool/ldog_x86.so -lxprotect/ddog/tool/ldog_conf.xml -lcprotect/ddog/tool/ldog_cipher.so protect/edog/tool/libedog-x86.so

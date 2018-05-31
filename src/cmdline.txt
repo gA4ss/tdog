@@ -1,0 +1,1 @@
+./tdog.out -P -E 11FFCBAA --xdebugger --select-cipher-type=stream --keep-code-local -l1./ldog_arm.so -lx./ldog_conf.xml -lc./ldog_cipher.so ./libhello-jni.so

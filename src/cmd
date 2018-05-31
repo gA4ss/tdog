@@ -1,0 +1,3 @@
+./tdog.out -P -E 11FFCBAA -l1./illa_arm.so -lx./tdog_loader_dis_vn.xml -lc./tdog_cipher.so --backup libhello-jni.so
+
+./tdog.out -P -E xxxxx --quiet -l1./ldog_arm.so -lx./ldog_conf.xml -lc./ldog_cipher.so --backup ./libhello-jni.so

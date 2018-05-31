@@ -1,0 +1,44 @@
+#DEBUG ?= 1
+#USE_GUNC ?= 1
+ARCH ?= 32
+TDOG_VERSION ?= 2
+
+# 设置工程名称
+project ?= tdog
+
+# 如果USE_GNUC等于1则设定相应编译选项
+ifeq ($(USE_GNUC),1)
+
+# 调试编译
+ifeq ($(DEBUG),1)
+DEFS += -DTDOG_DEBUG=1
+else
+DEFS += -DTDOG_DEBUG=0 -DNODEBUG
+endif
+
+# 一些自定义的宏设定
+#DEFS += -DTDOG_VERSION=$(TDOG_VERSION)
+#ifeq ($(TDOG_VERSION),1)
+#DEFS += -DTDOG_VERSION=1
+#else
+#DEFS += -DTDOG_VERSION=2
+#endif
+
+DEFS += -DUSE_GNUC=1
+
+# 启用ARM体系下的连接器
+DEFS += -DANDROID_ARM_LINKER=1 -DDT_INIT_SPECIAL
+
+# 其余错误编译选项
+# CXXFLAGS_WERROR = -Werror
+# -Wcast-qual 加上这个选项,类型转换很受限制
+# -Wcast-align 类型转换对齐粒度受限制
+CXXFLAGS += -Wall -Wpointer-arith -Wshadow -Wwrite-strings -W -Wno-unused-function
+CXXFLAGS += $(CXXFLAGS_WERROR)
+
+# 增加dlfun的操作
+LDADD += -ldl
+# 增加pthread的操作
+LDADD += -lpthread
+
+endif

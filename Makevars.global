@@ -1,0 +1,18 @@
+# 全局配置选项
+PLATFORM := $(shell uname | sed -e 's/_.*//')
+
+# 全局OBJECTS
+global_OBJECTS = 
+
+# 全局SOURCES
+global_SOURCES =
+
+# 编译器
+ifeq ($(CXX),)
+CXX = g++
+endif
+
+# 自动确定
+ifneq ($(findstring $(firstword $(CXX)),g++),)
+USE_GNUC ?= 1
+endif

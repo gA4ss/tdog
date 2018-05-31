@@ -1,0 +1,46 @@
+<tdog>  
+  <dis entry="dis_entry">
+	<loader_offset size="4">$LOADER_OFFSET</loader_offset>
+	<loader_size size="4">$LOADER_SIZE</loader_size>
+	<orig_entry size="4">$ORIG_ENTRY</orig_entry>
+	<xct_offset size="4">$XCT_OFFSET</xct_offset>
+	<old_targetsz>$TARGET_OLD_SIZE</old_targetsz>
+	<new_targetsz>$TARGET_NEW_SIZE</new_targetsz>
+	<old_target>$TARGET_OLD_OFFSET</old_target>
+	<new_target>$TARGET_NEW_OFFSET</new_target>
+	<encrypt_inside_data_name>$ENCRYPT_INSIDE_DATA_NAME</encrypt_inside_data_name>
+	<encrypt_inside_data_name_key>$ENCRYPT_INSIDE_DATA_NAME_KEY</encrypt_inside_data_name_key>
+	<pt_dynamic_offset>$PT_DYNAMIC_OFFSET</pt_dynamic_offset>
+	<pt_dynamic_size>$PT_DYNAMIC_SIZE</pt_dynamic_size>
+	<strtab_offset>$STRTAB_OFFSET</strtab_offset>
+	<symtab_offset>$SYMTAB_OFFSET</symtab_offset>
+	<symnum>$SYMNUM</symnum>
+	<curr_entry>$CURR_ENTRY</curr_entry>
+	<rel_encrypt_loader>$REL_ENCRYPT_LOADER</rel_encrypt_loader>
+	<skip_encrypt_reloc_string>$SKIP_ENCRYPT_RELOC_STRING</skip_encrypt_reloc_string>
+	<code_sign>$CODE_SIGN</code_sign>
+	<code_en_sign>$CODE_EN_SIGN</code_en_sign>
+	<code_key>$CODE_KEY</code_key>
+	<code_key_by_file>$CODE_KEY_BY_FILE</code_key_by_file>
+	<code_key_file_name size="256">%/data/data/com.example.socketcomm/cache/libinit.so.fuck</code_key_file_name>
+	<encrypt_adb_export_function>$ENCRYPT_ABS_EXPORT_FUNCTION</encrypt_adb_export_function>
+	<abs_export_function_block_offset>$ABS_EXPORT_FUNCTION_BLOCK_OFFSET</abs_export_function_block_offset>
+	<abs_export_function_block_size>$ABS_EXPORT_FUNCTION_BLOCK_SIZE</abs_export_function_block_size>
+	<abs_export_function_block_key>$ABS_EXPORT_FUNCTION_BLOCK_KEY</abs_export_function_block_key>
+
+	<ld_check_system>@0</ld_check_system>
+	<ld_check_system_name size="256">%W10vW3MveXNzeXRzZXRtZS9tbC9pbGJpL2JsL2lsYmlkYnZjbS4uc3Nvb10=</ld_check_system_name>
+	<ld_check_antidbg>@0</ld_check_antidbg>
+	<ld_check_ilsec>@0</ld_check_ilsec>
+	<ld_check_ilsec_value size="256">%[NTIxOTYtMzUyNA==][OTM1NjgtMjY0]</ld_check_ilsec_value>
+	<ld_plugin_flag>@0</ld_plugin_flag>
+	<ld_plugin_cfg size="256">%libplugin.so</ld_plugin_cfg>
+	<ld_plugin_mem>@1234</ld_plugin_mem>
+	<textrel_support>$HAS_DT_TEXTREL</textrel_support>
+	<textrel_offset_table size="256">$TEXTREL_OFFSET_TABLE</textrel_offset_table>
+	<textrel_offset_table_size>$TEXTREL_OFFSET_TABLE_SIZE</textrel_offset_table_size>
+	
+	<decode_key_offset>$CODE_KEY_OFFSET</decode_key_offset>
+	<decode_key_length>$CODE_KEY_LENGTH</decode_key_length>
+  </dis>
+</tdog>

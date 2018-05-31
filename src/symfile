@@ -1,0 +1,10 @@
+Java_com_cnvcs_App_OnInput
+Java_com_cnvcs_App_OnResult
+Java_com_cnvcs_App_OnBluetooth
+Java_com_cnvcs_App_OnTouch
+Java_com_cnvcs_App_OnKey
+Java_com_cnvcs_App_OnTimer
+Java_com_cnvcs_App_OnUpdate
+Java_com_cnvcs_App_OnGraphChange
+Java_com_cnvcs_App_OnResume
+Java_com_cnvcs_App_OnDestroy

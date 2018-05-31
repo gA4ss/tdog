@@ -1,0 +1,129 @@
+/home/devilogic/sdk/android-ndk-r8e/toolchains/arm-linux-androideabi-4.4.3/prebuilt/linux-x86_64/bin/arm-linux-androideabi-objdump -d libhello1.so
+
+libhello1.so:     file format elf32-littlearm
+
+
+Disassembly of section .plt:
+
+00000410 <printf@plt-0x14>:
+ 410:	e52de004 	push	{lr}		; (str lr, [sp, #-4]!)
+ 414:	e59fe004 	ldr	lr, [pc, #4]	; 420 <printf@plt-0x4>
+ 418:	e08fe00e 	add	lr, pc, lr
+ 41c:	e5bef008 	ldr	pc, [lr, #8]!
+ 420:	00001bb8 	.word	0x00001bb8
+
+00000424 <printf@plt>:
+ 424:	e28fc600 	add	ip, pc, #0	; 0x0
+ 428:	e28cca01 	add	ip, ip, #4096	; 0x1000
+ 42c:	e5bcfbb8 	ldr	pc, [ip, #3000]!
+
+00000430 <puts@plt>:
+ 430:	e28fc600 	add	ip, pc, #0	; 0x0
+ 434:	e28cca01 	add	ip, ip, #4096	; 0x1000
+ 438:	e5bcfbb0 	ldr	pc, [ip, #2992]!
+
+0000043c <__cxa_finalize@plt>:
+ 43c:	e28fc600 	add	ip, pc, #0	; 0x0
+ 440:	e28cca01 	add	ip, ip, #4096	; 0x1000
+ 444:	e5bcfba8 	ldr	pc, [ip, #2984]!
+
+00000448 <__cxa_atexit@plt>:
+ 448:	e28fc600 	add	ip, pc, #0	; 0x0
+ 44c:	e28cca01 	add	ip, ip, #4096	; 0x1000
+ 450:	e5bcfba0 	ldr	pc, [ip, #2976]!
+
+Disassembly of section .text:
+
+00000454 <atexit>:
+ 454:	e59f2008 	ldr	r2, [pc, #8]	; 464 <atexit+0x10>
+ 458:	e3a01000 	mov	r1, #0	; 0x0
+ 45c:	e08f2002 	add	r2, pc, r2
+ 460:	eafffff8 	b	448 <__cxa_atexit@plt>
+ 464:	00001b9c 	.word	0x00001b9c
+
+00000468 <__on_dlclose>:
+ 468:	e59f0004 	ldr	r0, [pc, #4]	; 474 <__on_dlclose+0xc>
+ 46c:	e08f0000 	add	r0, pc, r0
+ 470:	eafffff1 	b	43c <__cxa_finalize@plt>
+ 474:	00001b8c 	.word	0x00001b8c
+
+00000478 <my_init>:
+ 478:	e92d4800 	push	{fp, lr}
+ 47c:	e28db004 	add	fp, sp, #4	; 0x4
+ 480:	e59f3014 	ldr	r3, [pc, #20]	; 49c <my_init+0x24>
+ 484:	e08f3003 	add	r3, pc, r3
+ 488:	e1a00003 	mov	r0, r3
+ 48c:	ebffffe7 	bl	430 <puts@plt>
+ 490:	eb000002 	bl	4a0 <foo>
+ 494:	eb00002f 	bl	558 <foo2>
+ 498:	e8bd8800 	pop	{fp, pc}
+ 49c:	00000110 	.word	0x00000110
+
+000004a0 <foo>:
+ 4a0:	e92d4800 	push	{fp, lr}
+ 4a4:	e28db004 	add	fp, sp, #4	; 0x4
+ 4a8:	e24dd008 	sub	sp, sp, #8	; 0x8
+ 4ac:	e59f3060 	ldr	r3, [pc, #96]	; 514 <foo+0x74>
+ 4b0:	e08f3003 	add	r3, pc, r3
+ 4b4:	e3a02003 	mov	r2, #3	; 0x3
+ 4b8:	e50b200c 	str	r2, [fp, #-12]
+ 4bc:	e3a02004 	mov	r2, #4	; 0x4
+ 4c0:	e50b2008 	str	r2, [fp, #-8]
+ 4c4:	e59f204c 	ldr	r2, [pc, #76]	; 518 <foo+0x78>
+ 4c8:	e7932002 	ldr	r2, [r3, r2]
+ 4cc:	e5921000 	ldr	r1, [r2]
+ 4d0:	e51b200c 	ldr	r2, [fp, #-12]
+ 4d4:	e0811002 	add	r1, r1, r2
+ 4d8:	e59f203c 	ldr	r2, [pc, #60]	; 51c <foo+0x7c>
+ 4dc:	e7932002 	ldr	r2, [r3, r2]
+ 4e0:	e5821000 	str	r1, [r2]
+ 4e4:	e59f2030 	ldr	r2, [pc, #48]	; 51c <foo+0x7c>
+ 4e8:	e7933002 	ldr	r3, [r3, r2]
+ 4ec:	e593c000 	ldr	ip, [r3]
+ 4f0:	e59f3028 	ldr	r3, [pc, #40]	; 520 <foo+0x80>
+ 4f4:	e08f3003 	add	r3, pc, r3
+ 4f8:	e1a00003 	mov	r0, r3
+ 4fc:	e51b100c 	ldr	r1, [fp, #-12]
+ 500:	e51b2008 	ldr	r2, [fp, #-8]
+ 504:	e1a0300c 	mov	r3, ip
+ 508:	ebffffc5 	bl	424 <printf@plt>
+ 50c:	e24bd004 	sub	sp, fp, #4	; 0x4
+ 510:	e8bd8800 	pop	{fp, pc}
+ 514:	00001b20 	.word	0x00001b20
+ 518:	00000020 	.word	0x00000020
+ 51c:	0000001c 	.word	0x0000001c
+ 520:	000000bc 	.word	0x000000bc
+
+00000524 <bar>:
+ 524:	e52db004 	push	{fp}		; (str fp, [sp, #-4]!)
+ 528:	e28db000 	add	fp, sp, #0	; 0x0
+ 52c:	e59f301c 	ldr	r3, [pc, #28]	; 550 <bar+0x2c>
+ 530:	e08f3003 	add	r3, pc, r3
+ 534:	e59f2018 	ldr	r2, [pc, #24]	; 554 <bar+0x30>
+ 538:	e7933002 	ldr	r3, [r3, r2]
+ 53c:	e3a02002 	mov	r2, #2	; 0x2
+ 540:	e5832000 	str	r2, [r3]
+ 544:	e28bd000 	add	sp, fp, #0	; 0x0
+ 548:	e8bd0800 	pop	{fp}
+ 54c:	e12fff1e 	bx	lr
+ 550:	00001aa0 	.word	0x00001aa0
+ 554:	00000024 	.word	0x00000024
+
+00000558 <foo2>:
+ 558:	e92d4830 	push	{r4, r5, fp, lr}
+ 55c:	e28db00c 	add	fp, sp, #12	; 0xc
+ 560:	e59f4028 	ldr	r4, [pc, #40]	; 590 <foo2+0x38>
+ 564:	e08f4004 	add	r4, pc, r4
+ 568:	ebffffed 	bl	524 <bar>
+ 56c:	e59f3020 	ldr	r3, [pc, #32]	; 594 <foo2+0x3c>
+ 570:	e7943003 	ldr	r3, [r4, r3]
+ 574:	e5932000 	ldr	r2, [r3]
+ 578:	e59f3018 	ldr	r3, [pc, #24]	; 598 <foo2+0x40>
+ 57c:	e08f3003 	add	r3, pc, r3
+ 580:	e1a00003 	mov	r0, r3
+ 584:	e1a01002 	mov	r1, r2
+ 588:	ebffffa5 	bl	424 <printf@plt>
+ 58c:	e8bd8830 	pop	{r4, r5, fp, pc}
+ 590:	00001a6c 	.word	0x00001a6c
+ 594:	00000024 	.word	0x00000024
+ 598:	00000050 	.word	0x00000050
